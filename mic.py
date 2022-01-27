@@ -23,7 +23,7 @@ def myspeech():
 
 
 def myspeech_pause():
-   var_pause = 1
+   var_pause = true
 
    r = sr.Recognizer()
    with sr.Microphone() as source:
@@ -34,6 +34,6 @@ def myspeech_pause():
    query = r.recognize_google(audio, language='fr-in')
 
    if (query == "rallume toi"):
-      var_pause = 0
+      var_pause = false
 
    return var_pause
