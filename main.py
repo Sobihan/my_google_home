@@ -3,19 +3,19 @@ from jarvis import *
 
 def main():
     presentation()
-    pause = 0
+    pause = false
     while True:
-        if (pause == 0):
+        if (pause == false):
             query = myspeech()
             query = query.lower()
             cmd(query)
 
 
             if (query == "mets-toi en pause"):
-                pause = 1
+                pause = true
  
         
-        if(pause == 1):
+        if(pause):
             pause = myspeech_pause()
 
 
